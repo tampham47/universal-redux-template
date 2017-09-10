@@ -3,10 +3,11 @@ import ReactDOMServer from 'react-dom/server'
 import { useRouterHistory, RouterContext, match } from 'react-router'
 import { createMemoryHistory, useQueries } from 'history'
 import Promise from 'bluebird'
-import configureStore from 'store/configureStore'
-import createRoutes from 'routes/index'
 import { Provider } from 'react-redux'
 import Helmet from 'react-helmet'
+
+import configureStore from 'store'
+import createRoutes from 'routes'
 
 let scriptSrcs
 
