@@ -4,7 +4,7 @@
   "description": "Universal Redux Template",
   "scripts": {
     "lint": "eslint app bin",
-    "start": "yarn build && cross-env NODE_PATH=./app concurrently --kill-others \"node app/server\"",
+    "start": "yarn build && cross-env NODE_PATH=./app concurrently --kill-others \"node server\"",
     "test:prebuild": "./bin/test-prebuild",
     "test:watch": "yarn run test:prebuild; yarn run test:babelwatch",
     "test:babelwatch": "NODE_ENV=test babel app --out-dir .babel-test-build --source-maps --watch --ignore app/assets app/styles app/server  --skip-initial-build",

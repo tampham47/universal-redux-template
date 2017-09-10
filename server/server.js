@@ -9,14 +9,14 @@ let port = process.env.PORT || 3000
 server.use(compression())
 
 if (process.env.NODE_ENV === 'production') {
-  server.use(Express.static(path.join(__dirname, '../..', 'public')))
+  server.use(Express.static(path.join(__dirname, '..', 'public')))
 } else {
-  server.use('/assets', Express.static(path.join(__dirname, '..', 'assets')))
-  server.use(Express.static(path.join(__dirname, '../..', 'dist')))
+  server.use('/assets', Express.static(path.join(__dirname, '..', 'app/assets')))
+  server.use(Express.static(path.join(__dirname, '..', 'dist')))
 
   const webpackDevMiddleware = require('webpack-dev-middleware')
   const webpackHotMiddleware = require('webpack-hot-middleware')
-  const webpackConfig = require(path.join(__dirname, '../..', 'webpack.config'))
+  const webpackConfig = require(path.join(__dirname, '..', 'webpack.config'))
   const webpack = require('webpack')
   const compiler = webpack(webpackConfig)
 
