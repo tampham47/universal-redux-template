@@ -1,3 +1,7 @@
+:root {
+  --main-color: #F06D06;
+}
+
 .main {
-  background-color: green;
+  background-color: var(--main-color);
 }
