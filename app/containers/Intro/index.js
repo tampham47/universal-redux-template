@@ -3,14 +3,15 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import Helmet from 'react-helmet'
 
+import styles from './styles.css';
+
+
 class Intro extends Component {
   render() {
     return (
-      <div className="intro">
-        <Helmet
-          title="Intro"
-        />
-        <h1>Intro Page</h1>
+      <div className={styles.main}>
+        <Helmet title="Intro" />
+        <h1 className={styles.title}>Intro Page</h1>
         <div>
           <img src="/assets/images/head.png"/>
         </div>

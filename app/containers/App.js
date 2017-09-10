@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Helmet from 'react-helmet'
-import styles from './styles.css';
+import styles from './app.css';
 
 
 class App extends Component {
