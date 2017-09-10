@@ -11,11 +11,11 @@ class Intro extends Component {
     return (
       <div className={styles.main}>
         <Helmet title="Intro" />
-        <h1 className={styles.title}>Intro Page</h1>
+        <h1 className={styles.title}>Main</h1>
         <div>
           <img src="/assets/images/head.png"/>
         </div>
-        <Link to="/main">to main</Link>
+        <Link to="/">back to home</Link>
       </div>
     )
   }

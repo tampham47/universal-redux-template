@@ -5,6 +5,7 @@ import configureStore from 'store/configureStore'
 
 import App from 'containers/App'
 import Intro from 'containers/Intro'
+import Main from 'containers/Main'
 // import Questions from 'containers/Questions'
 // import Question from 'containers/Question'
 
@@ -13,6 +14,8 @@ export default function(history) {
     <Router history={history}>
       <Route path="/" component={App}>
         <IndexRoute component={Intro} />
+        <Route path="main" component={Main} />
+        
         {/* <Route path="questions" component={Questions} />
         <Route path="questions/:id" component={Question} /> */}
       </Route>
