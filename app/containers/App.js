@@ -2,11 +2,13 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Helmet from 'react-helmet'
+import styles from './app.css';
+
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className={styles.main}>
         <Helmet
           defaultTitle="Redux real-world example"
           titleTemplate="%s - Redux real-world example"

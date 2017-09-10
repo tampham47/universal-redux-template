@@ -40,6 +40,23 @@ var config = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         include: __dirname
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: true,
+              localIdentName: '[path][name]---[local]',
+              autoprefixer: false,
+              camelCase: true,
+            },
+          },
+          'postcss-loader'
+        ]
       }
     ]
   }
